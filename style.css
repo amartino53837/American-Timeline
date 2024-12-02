@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.scramble-button-container {
+  margin-top: 20px;  /* Add some margin to the top */
+}
+
+.timeline-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.scramble-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 10px;
+  width: 90%;
+  min-height: 150px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 30px;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.slot {
+  width: 150px;  /* Fixed width for timeline slots */
+  height: 80px;  /* Fixed height for timeline slots */
+  background-color: #d9d9d9;
+  border: 2px dashed #aaa;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.slot[data-year]::after {
+  content: attr(data-year);
+  position: absolute;
+  bottom: -25px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.event {
+  font-size: 1rem;
+  padding: 10px 15px;
+  background-color: #0078d7;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  user-select: none;
+  cursor: grab;
+  width: 130px; /* Fixed width for event boxes */
+  height: 60px; /* Fixed height for event boxes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event:hover {
+  background-color: #005bb5;
+}
+
+.event .date {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: filter 0.3s ease-in-out;
+}
+
+.event.scrambled .date {
+  filter: blur(8px);
+}
+
+.content-panel {
+  width: 100vw;
+  height: 20vh;
+  background-color: #fff;
+  border-top: 2px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005bb5;
+}

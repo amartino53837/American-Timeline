@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrambled Timeline - American Revolution</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scramble Button at the top -->
+  <div class="scramble-button-container">
+    <button id="scramble-button">Scramble Events</button>
+  </div>
+
+  <div class="timeline-container">
+    <div class="scramble-area">
+      <div class="event" data-year="1770" data-content="The Boston Massacre: A deadly riot that escalated tensions between colonists and British soldiers." draggable="true">
+        <span class="date">1770</span>
+        <p>The Boston Massacre</p>
+      </div>
+      <div class="event" data-year="1773" data-content="The Boston Tea Party: Protesters dumped tea into Boston Harbor in defiance of British taxation." draggable="true">
+        <span class="date">1773</span>
+        <p>The Boston Tea Party</p>
+      </div>
+      <div class="event" data-year="1775" data-content="The Battles of Lexington and Concord: The first military engagements of the American Revolutionary War." draggable="true">
+        <span class="date">1775</span>
+        <p>Battles of Lexington and Concord</p>
+      </div>
+      <div class="event" data-year="1776" data-content="Declaration of Independence: The colonies formally declared independence from Britain." draggable="true">
+        <span class="date">1776</span>
+        <p>Declaration of Independence</p>
+      </div>
+      <div class="event" data-year="1781" data-content="Battle of Yorktown: The final major battle of the Revolution, leading to British surrender." draggable="true">
+        <span class="date">1781</span>
+        <p>Battle of Yorktown</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="slot" data-year="1770"></div>
+      <div class="slot" data-year="1773"></div>
+      <div class="slot" data-year="1775"></div>
+      <div class="slot" data-year="1776"></div>
+      <div class="slot" data-year="1781"></div>
+    </div>
+  </div>
+
+  <div class="content-panel">
+    <h2>Timeline Event</h2>
+    <p id="content-text">Click "Scramble" to start!</p>
+    <button id="check-button">Check Answers</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
